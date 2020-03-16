@@ -9,37 +9,37 @@ public class Delegation {
     @GeneratedValue
     @Column(name = "id")
     private int id;
-    @Column(name = "description")
-    private String description;
-    @Column(name = "dateTimeStart", nullable=false)
-    private Date dateTimeStart;
-    @Column(name = "dateTimeStop", nullable=false)
-    private Date dateTimeStop;
-    @Column(name = "travelDietAmount", columnDefinition = "double default 30")
-    private double travelDietAmount;
-    @Column(name = "breakfastNumber", columnDefinition = "integer default 30")
-    private int breakfastNumber;
-    @Column(name = "dinnerNumber", columnDefinition = "integer default 0")
-    private int dinnerNumber;
-    @Column(name = "supperNumber", columnDefinition = "integer default 0")
-    private int supperNumber;
+    @Column(name = "desc")
+    private String desc;
+    @Column(name = "dTS", nullable=false)
+    private Date dTS;
+    @Column(name = "dTStop", nullable=false)
+    private Date dTStop;
+    @Column(name = "tDA", columnDefinition = "double default 30")
+    private double tDA;
+    @Column(name = "bN", columnDefinition = "integer default 30")
+    private int bN;
+    @Column(name = "dN", columnDefinition = "integer default 0")
+    private int dN;
+    @Column(name = "sN", columnDefinition = "integer default 0")
+    private int sN;
     @Enumerated(EnumType.STRING)
-    @Column(name = "transportType")
-    private TransportType transportType;
-    @Column(name = "ticketPrice")
-    private double ticketPrice;
-    @Column(name = "autoCapacity")
-    private Enum autoCapacity;
+    @Column(name = "tT")
+    private TransportType tT;
+    @Column(name = "tP")
+    private double tP;
+    @Column(name = "aC")
+    private Enum aC;
     @Column(name = "km")
     private double km;
-    @Column(name = "accomodationPrice")
-    private double accomodationPrice;
-    @Column(name = "otherTicketsPrice")
-    private double otherTicketsPrice;
-    @Column(name = "otherOutlayDesc")
-    private String otherOutlayDesc;
-    @Column(name = "otherOutlayPrice")
-    private double otherOutlayPrice;
+    @Column(name = "aP")
+    private double aP;
+    @Column(name = "oTP")
+    private double oTP;
+    @Column(name = "oOD")
+    private String oOD;
+    @Column(name = "oOP")
+    private double oOP;
     @ManyToOne
     @JoinColumn(name = "id")
     private Users user;
@@ -56,83 +56,83 @@ public class Delegation {
     }
 
     public String getDescription() {
-        return description;
+        return desc;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescription(String desc) {
+        this.desc = desc;
     }
 
     public Date getDateTimeStart() {
-        return dateTimeStart;
+        return dTS;
     }
 
-    public void setDateTimeStart(Date dateTimeStart) {
-        this.dateTimeStart = dateTimeStart;
+    public void setDateTimeStart(Date dTS) {
+        this.dTS = dTS;
     }
 
     public Date getDateTimeStop() {
-        return dateTimeStop;
+        return dTStop;
     }
 
-    public void setDateTimeStop(Date dateTimeStop) {
-        this.dateTimeStop = dateTimeStop;
+    public void setDateTimeStop(Date dTStop) {
+        this.dTStop = dTStop;
     }
 
     public double getTravelDietAmount() {
-        return travelDietAmount;
+        return tDA;
     }
 
-    public void setTravelDietAmount(double travelDietAmount) {
-        this.travelDietAmount = travelDietAmount;
+    public void setTravelDietAmount(double tDA) {
+        this.tDA = tDA;
     }
 
     public int getBreakfastNumber() {
-        return breakfastNumber;
+        return bN;
     }
 
-    public void setBreakfastNumber(int breakfastNumber) {
-        this.breakfastNumber = breakfastNumber;
+    public void setBreakfastNumber(int bN) {
+        this.bN = bN;
     }
 
     public int getDinnerNumber() {
-        return dinnerNumber;
+        return dN;
     }
 
-    public void setDinnerNumber(int dinnerNumber) {
-        this.dinnerNumber = dinnerNumber;
+    public void setDinnerNumber(int dN) {
+        this.dN = dN;
     }
 
     public int getSupperNumber() {
-        return supperNumber;
+        return sN;
     }
 
-    public void setSupperNumber(int supperNumber) {
-        this.supperNumber = supperNumber;
+    public void setSupperNumber(int sN) {
+        this.sN = sN;
     }
 
     public TransportType getTransportType() {
-        return transportType;
+        return tT;
     }
 
-    public void setTransportType(TransportType transportType) {
-        this.transportType = transportType;
+    public void setTransportType(TransportType tT) {
+        this.tT = tT;
     }
 
     public double getTicketPrice() {
-        return ticketPrice;
+        return tP;
     }
 
-    public void setTicketPrice(double ticketPrice) {
-        this.ticketPrice = ticketPrice;
+    public void setTicketPrice(double tP) {
+        this.tP = tP;
     }
 
     public Enum getAutoCapacity() {
-        return autoCapacity;
+        return aC;
     }
 
-    public void setAutoCapacity(Enum autoCapacity) {
-        this.autoCapacity = autoCapacity;
+    public void setAutoCapacity(Enum aC) {
+        this.aC = aC;
     }
 
     public double getKm() {
@@ -144,34 +144,34 @@ public class Delegation {
     }
 
     public double getAccomodationPrice() {
-        return accomodationPrice;
+        return aP;
     }
 
-    public void setAccomodationPrice(double accomodationPrice) {
-        this.accomodationPrice = accomodationPrice;
+    public void setAccomodationPrice(double aP) {
+        this.aP = aP;
     }
 
     public double getOtherTicketsPrice() {
-        return otherTicketsPrice;
+        return oTP;
     }
 
-    public void setOtherTicketsPrice(double otherTicketsPrice) {
-        this.otherTicketsPrice = otherTicketsPrice;
+    public void setOtherTicketsPrice(double oTP) {
+        this.oTP = oTP;
     }
 
     public String getOtherOutlayDesc() {
-        return otherOutlayDesc;
+        return oOD;
     }
 
-    public void setOtherOutlayDesc(String otherOutlayDesc) {
-        this.otherOutlayDesc = otherOutlayDesc;
+    public void setOtherOutlayDesc(String oOD) {
+        this.oOD = oOD;
     }
 
     public double getOtherOutlayPrice() {
-        return otherOutlayPrice;
+        return oOP;
     }
 
-    public void setOtherOutlayPrice(double otherOutlayPrice) {
-        this.otherOutlayPrice = otherOutlayPrice;
+    public void setOtherOutlayPrice(double oOP) {
+        this.oOP = oOP;
     }
 }
