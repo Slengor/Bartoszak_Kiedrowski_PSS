@@ -15,7 +15,7 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <vaadin.version>14.1.28</vaadin.version>
+        <vaadin.version>14.6.2</vaadin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
